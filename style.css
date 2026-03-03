@@ -1,151 +1,127 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: #f4f7fb;
-  color: #222;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
+    background: #001f4d;
+    padding: 15px;
+    text-align: center;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #0a66ff;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-nav a {
-  text-decoration: none;
-  margin-left: 25px;
-  color: #333;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #0a66ff;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
-  height: 85vh;
-  background: linear-gradient(rgba(10,102,255,0.8), rgba(0,0,50,0.8)),
-  url('https://images.unsplash.com/photo-1518770660439-4636190af475');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+    background: linear-gradient(to right, #001f4d, #0033cc);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-  font-size: 45px;
-  font-weight: 700;
+    font-size: 40px;
+    margin: 0;
 }
 
 .hero p {
-  margin: 20px 0;
-  font-size: 18px;
+    font-size: 18px;
+    margin: 15px 0;
 }
 
-button {
-  padding: 12px 25px;
-  border: none;
-  background: #0a66ff;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+.btn {
+    background: white;
+    color: #0033cc;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-button:hover {
-  background: #004bcc;
+.btn:hover {
+    background: #e6e6e6;
 }
 
-/* Plans */
+/* Plans Section */
 .plans {
-  padding: 80px 20px;
-  text-align: center;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.plans h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+.plan-card {
+    background: #f4f8ff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.plan-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+/* Contact Form */
+.contact-section {
+    padding: 60px 20px;
+    background: #f4f8ff;
+    text-align: center;
 }
 
-.card {
-  background: white;
-  padding: 40px 30px;
-  width: 280px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
+.contact-section form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.contact-section input,
+.contact-section select,
+.contact-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-.card h4 {
-  margin: 20px 0;
-  color: #0a66ff;
+.contact-section button {
+    padding: 12px;
+    background: #0033cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.popular {
-  border: 2px solid #0a66ff;
+.contact-section button:hover {
+    background: #001f80;
 }
 
-/* Contact */
-.contact {
-  padding: 60px 20px;
-  text-align: center;
-  background: white;
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    padding: 40px;
 }
 
 /* Footer */
 footer {
-  background: #0a66ff;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background: #001f4d;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
 /* WhatsApp Button */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  font-size: 24px;
-  padding: 12px 16px;
-  border-radius: 50%;
-  text-decoration: none;
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
