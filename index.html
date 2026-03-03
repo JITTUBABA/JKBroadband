@@ -3,346 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JKBroadband - Ultra Fast Internet</title>
+<title>JKBroadband</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#0b0f1a;
-color:#ffffff;
-overflow-x:hidden;
-}
-
-/* HEADER */
-header{
-background:rgba(10,15,30,0.7);
-backdrop-filter:blur(15px);
-padding:20px 0;
-position:fixed;
-width:100%;
-top:0;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-width:85%;
-margin:auto;
-}
-
-.logo{
-font-size:22px;
-font-weight:600;
-}
-
-.logo span{
-color:#00aaff;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-}
-
-nav ul li{
-margin-left:30px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:#ffffff;
-opacity:0.7;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-opacity:1;
-color:#00aaff;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-background:linear-gradient(to bottom,#0b0f1a,#111827);
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#9ca3af;
-margin-bottom:40px;
-font-size:20px;
-}
-
-.btn{
-background:#00aaff;
-padding:14px 35px;
-border-radius:40px;
-color:white;
-text-decoration:none;
-transition:0.3s;
-box-shadow:0 10px 30px rgba(0,170,255,0.3);
-}
-
-.btn:hover{
-background:#0088cc;
-transform:translateY(-3px);
-}
-
-/* SECTIONS */
-section{
-padding:120px 20px;
-text-align:center;
-}
-
-h2{
-font-size:42px;
-margin-bottom:50px;
-}
-
-/* CARDS */
-.card-container{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:40px;
-width:300px;
-border-radius:25px;
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,0.1);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border:1px solid #00aaff;
-box-shadow:0 15px 40px rgba(0,170,255,0.2);
-}
-
-.price{
-font-size:22px;
-color:#00aaff;
-margin:20px 0;
-}
-
-/* SPEED TEST */
-.speed-circle{
-width:200px;
-height:200px;
-border-radius:50%;
-border:6px solid #00aaff;
-display:flex;
-justify-content:center;
-align-items:center;
-margin:0 auto 30px;
-font-size:28px;
-box-shadow:0 0 40px rgba(0,170,255,0.4);
-}
-
-button{
-background:#00aaff;
-border:none;
-padding:12px 25px;
-border-radius:25px;
-color:white;
-cursor:pointer;
-}
-
-button:hover{
-background:#0088cc;
-}
-
-/* INPUT BOXES */
-input{
-padding:12px;
-width:100%;
-margin:10px 0;
-border-radius:10px;
-border:none;
-outline:none;
-}
-
-/* LOGIN BOX */
-.login-box{
-max-width:400px;
-margin:auto;
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:25px;
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,0.1);
-}
-
-/* FOOTER */
-footer{
-background:#0b0f1a;
-padding:20px;
-color:#6e6e73;
-border-top:1px solid rgba(255,255,255,0.08);
-}
-
-/* SCROLL REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(80px);
-transition:1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* STARS */
-.stars{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-background:url('https://www.transparenttextures.com/patterns/stardust.png');
-animation:moveStars 100s linear infinite;
-z-index:-1;
-opacity:0.3;
-}
-
-@keyframes moveStars{
-from{background-position:0 0;}
-to{background-position:10000px 5000px;}
-}
-
-</style>
 </head>
-
 <body>
-
-<div class="stars"></div>
 
 <header>
 <nav>
 <div class="logo">JK<span>Broadband</span></div>
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Plans</a></li>
-<li><a href="#">Speed Test</a></li>
-<li><a href="#">Login</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 </header>
 
 <div class="hero">
 <div>
-<h1>Experience Lightning Fast Internet</h1>
-<p>Premium Fiber Broadband for Your Home & Business</p>
-<a href="#" class="btn">Get Connection</a>
+<h1>Lightning Fast Fiber Internet</h1>
+<p>Premium Connectivity for Home & Business</p>
+<a href="#plans" class="btn">View Plans</a>
 </div>
 </div>
 
-<section class="reveal">
+<section id="plans">
 <h2>Our Plans</h2>
-<div class="card-container">
-<div class="card">
-<h3>Basic Plan</h3>
+
+<div class="plan-container">
+
+<div class="plan">
+<h3>Basic</h3>
 <div class="price">₹499 / month</div>
 <p>50 Mbps Unlimited</p>
 </div>
 
-<div class="card">
-<h3>Pro Plan</h3>
+<div class="plan">
+<h3>Pro</h3>
 <div class="price">₹799 / month</div>
 <p>150 Mbps Unlimited</p>
 </div>
 
-<div class="card">
-<h3>Ultra Plan</h3>
+<div class="plan">
+<h3>Ultra</h3>
 <div class="price">₹1199 / month</div>
 <p>300 Mbps Unlimited</p>
 </div>
+
 </div>
 </section>
 
-<section class="reveal">
-<h2>Speed Test</h2>
-<div class="speed-circle">
-<span id="speedValue">0</span> Mbps
-</div>
-<button onclick="startSpeedTest()">Start Test</button>
-</section>
-
-<section class="reveal">
-<h2>Customer Login</h2>
-<div class="login-box">
-<input type="text" placeholder="Username">
-<input type="password" placeholder="Password">
-<button>Login</button>
-</div>
+<section id="contact">
+<h2>Contact Us</h2>
+<p>Raipur, Chhattisgarh</p>
+<p>+91 XXXXX XXXXX</p>
+<p>support@jkbroadband.in</p>
 </section>
 
 <footer>
 © 2026 JKBroadband. All Rights Reserved.
 </footer>
-
-<script>
-
-// SCROLL REVEAL
-function revealOnScroll(){
-const reveals = document.querySelectorAll(".reveal");
-
-for(let i=0;i<reveals.length;i++){
-const windowHeight = window.innerHeight;
-const elementTop = reveals[i].getBoundingClientRect().top;
-const elementVisible = 100;
-
-if(elementTop < windowHeight - elementVisible){
-reveals[i].classList.add("active");
-}
-}
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
-// SPEED TEST
-function startSpeedTest(){
-let speed = 0;
-let maxSpeed = Math.floor(Math.random()*300)+50;
-let speedDisplay = document.getElementById("speedValue");
-
-let interval = setInterval(()=>{
-speed += 5;
-speedDisplay.innerText = speed;
-
-if(speed >= maxSpeed){
-clearInterval(interval);
-}
-},50);
-}
-
-</script>
 
 </body>
 </html>
