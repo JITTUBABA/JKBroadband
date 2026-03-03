@@ -3,109 +3,345 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JKBroadband | Premium Fiber Internet</title>
+<title>JKBroadband - Ultra Fast Internet</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
 
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0f1a;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+background:rgba(10,15,30,0.7);
+backdrop-filter:blur(15px);
+padding:20px 0;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:85%;
+margin:auto;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+.logo span{
+color:#00aaff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#ffffff;
+opacity:0.7;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+opacity:1;
+color:#00aaff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(to bottom,#0b0f1a,#111827);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#9ca3af;
+margin-bottom:40px;
+font-size:20px;
+}
+
+.btn{
+background:#00aaff;
+padding:14px 35px;
+border-radius:40px;
+color:white;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(0,170,255,0.3);
+}
+
+.btn:hover{
+background:#0088cc;
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{
+padding:120px 20px;
+text-align:center;
+}
+
+h2{
+font-size:42px;
+margin-bottom:50px;
+}
+
+/* CARDS */
+.card-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+width:300px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid #00aaff;
+box-shadow:0 15px 40px rgba(0,170,255,0.2);
+}
+
+.price{
+font-size:22px;
+color:#00aaff;
+margin:20px 0;
+}
+
+/* SPEED TEST */
+.speed-circle{
+width:200px;
+height:200px;
+border-radius:50%;
+border:6px solid #00aaff;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0 auto 30px;
+font-size:28px;
+box-shadow:0 0 40px rgba(0,170,255,0.4);
+}
+
+button{
+background:#00aaff;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#0088cc;
+}
+
+/* INPUT BOXES */
+input{
+padding:12px;
+width:100%;
+margin:10px 0;
+border-radius:10px;
+border:none;
+outline:none;
+}
+
+/* LOGIN BOX */
+.login-box{
+max-width:400px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* FOOTER */
+footer{
+background:#0b0f1a;
+padding:20px;
+color:#6e6e73;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* SCROLL REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(80px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* STARS */
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:url('https://www.transparenttextures.com/patterns/stardust.png');
+animation:moveStars 100s linear infinite;
+z-index:-1;
+opacity:0.3;
+}
+
+@keyframes moveStars{
+from{background-position:0 0;}
+to{background-position:10000px 5000px;}
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- LOADING SCREEN -->
-<div id="loader">
-  <div class="spinner"></div>
-  <h2>JKBroadband</h2>
-</div>
+<div class="stars"></div>
 
 <header>
 <nav>
-<h2 class="logo">JK<span>Broadband</span></h2>
+<div class="logo">JK<span>Broadband</span></div>
 <ul>
-<li><a href="#plans">Plans</a></li>
-<li><a href="#features">Features</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">Plans</a></li>
+<li><a href="#">Speed Test</a></li>
+<li><a href="#">Login</a></li>
 </ul>
 </nav>
 </header>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Experience Next-Gen Fiber Internet</h1>
-<p>Ultra Fast • Secure • Reliable Broadband in Raipur</p>
-<a href="#plans" class="btn">Explore Plans</a>
+<div class="hero">
+<div>
+<h1>Experience Lightning Fast Internet</h1>
+<p>Premium Fiber Broadband for Your Home & Business</p>
+<a href="#" class="btn">Get Connection</a>
 </div>
-</section>
-
-<section id="features" class="features reveal">
-<h2>Why Choose JKBroadband?</h2>
-<div class="feature-box">
-<div class="feature">⚡ Ultra Fast Speed</div>
-<div class="feature">🔒 Secure Network</div>
-<div class="feature">📡 24/7 Support</div>
-<div class="feature">🎮 Low Ping Gaming</div>
 </div>
-</section>
 
-<section id="plans" class="plans reveal">
-<h2>Premium Plans</h2>
-<div class="plan-cards">
+<section class="reveal">
+<h2>Our Plans</h2>
+<div class="card-container">
 <div class="card">
-<h3>Basic</h3>
-<p class="price">₹499/month</p>
-<p>50 Mbps</p>
-<p>Unlimited Data</p>
-<button>Choose Plan</button>
-</div>
-
-<div class="card popular">
-<h3>Premium</h3>
-<p class="price">₹799/month</p>
-<p>100 Mbps</p>
-<p>Unlimited Data</p>
-<button>Choose Plan</button>
+<h3>Basic Plan</h3>
+<div class="price">₹499 / month</div>
+<p>50 Mbps Unlimited</p>
 </div>
 
 <div class="card">
-<h3>Ultra</h3>
-<p class="price">₹999/month</p>
-<p>200 Mbps</p>
-<p>Unlimited Data</p>
-<button>Choose Plan</button>
+<h3>Pro Plan</h3>
+<div class="price">₹799 / month</div>
+<p>150 Mbps Unlimited</p>
+</div>
+
+<div class="card">
+<h3>Ultra Plan</h3>
+<div class="price">₹1199 / month</div>
+<p>300 Mbps Unlimited</p>
 </div>
 </div>
 </section>
 
-<section id="contact" class="contact reveal">
-<h2>Contact Us</h2>
-<p>📍 Raipur, Chhattisgarh</p>
-<p>📞 9301269783</p>
-<p>📧 jkbroadband07@gmail.com</p>
+<section class="reveal">
+<h2>Speed Test</h2>
+<div class="speed-circle">
+<span id="speedValue">0</span> Mbps
+</div>
+<button onclick="startSpeedTest()">Start Test</button>
 </section>
 
-<a href="https://wa.me/919301269783" class="whatsapp" target="_blank">💬</a>
+<section class="reveal">
+<h2>Customer Login</h2>
+<div class="login-box">
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<button>Login</button>
+</div>
+</section>
 
 <footer>
-<p>© 2026 JKBroadband | All Rights Reserved</p>
+© 2026 JKBroadband. All Rights Reserved.
 </footer>
 
 <script>
-// LOADER
-window.addEventListener("load",()=>{
-document.getElementById("loader").style.display="none";
-});
 
 // SCROLL REVEAL
+function revealOnScroll(){
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll",()=>{
-reveals.forEach(el=>{
+for(let i=0;i<reveals.length;i++){
 const windowHeight = window.innerHeight;
-const elementTop = el.getBoundingClientRect().top;
-if(elementTop < windowHeight - 100){
-el.classList.add("active");
+const elementTop = reveals[i].getBoundingClientRect().top;
+const elementVisible = 100;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
 }
-});
-});
+}
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// SPEED TEST
+function startSpeedTest(){
+let speed = 0;
+let maxSpeed = Math.floor(Math.random()*300)+50;
+let speedDisplay = document.getElementById("speedValue");
+
+let interval = setInterval(()=>{
+speed += 5;
+speedDisplay.innerText = speed;
+
+if(speed >= maxSpeed){
+clearInterval(interval);
+}
+},50);
+}
+
 </script>
 
 </body>
