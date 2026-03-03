@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JKBroadband Internet Services</title>
+<title>JKBroadband | Raipur’s Trusted Fiber Internet</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,22 +13,23 @@
   <div class="logo">JKBroadband</div>
   <nav>
     <a href="#">Home</a>
-    <a href="#">Plans</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#plans">Plans</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Ultra Fast Internet For Modern Homes</h1>
-    <p>Unlimited Data | 24/7 Support | High Speed Fiber</p>
-    <button>View Plans</button>
+    <h1>Raipur’s Trusted Fiber Internet</h1>
+    <p>Ultra Fast | Unlimited Data | 24/7 Local Support</p>
+    <button onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">
+      View Plans
+    </button>
   </div>
 </section>
 
-<section class="plans">
-  <h2>Our Plans</h2>
+<section class="plans" id="plans">
+  <h2>Our Internet Plans</h2>
   <div class="plan-container">
 
     <div class="card">
@@ -39,7 +40,7 @@
     </div>
 
     <div class="card popular">
-      <h3>Pro</h3>
+      <h3>Pro (Most Popular)</h3>
       <p>100 Mbps Speed</p>
       <h4>₹799/month</h4>
       <button>Choose Plan</button>
@@ -55,9 +56,17 @@
   </div>
 </section>
 
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Call Us: +91 9XXXXXXXXX</p>
+  <p>Email: support@jkbroadband.in</p>
+</section>
+
 <footer>
-  <p>© 2026 JKBroadband Internet Services | All Rights Reserved</p>
+  <p>© 2026 JKBroadband | Raipur’s Trusted Fiber Internet</p>
 </footer>
+
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
