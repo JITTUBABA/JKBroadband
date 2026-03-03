@@ -3,87 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JKBroadband</title>
+<title>JKBroadband | High Speed Internet</title>
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<!-- Loading Screen -->
-<div id="loader">
-  <h1>JKBroadband</h1>
-</div>
-
 <header>
-  <div class="logo">JKBroadband</div>
-  <button id="modeToggle">🌙</button>
+<nav>
+<h2 class="logo">JK<span>Broadband</span></h2>
+<ul>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button id="darkToggle">🌙</button>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1><span id="typing"></span></h1>
-    <p>Ultra Fast • Reliable • Affordable</p>
-    <a href="#plans" class="btn">View Plans</a>
-  </div>
-  <div class="particles"></div>
+<div class="hero-content">
+<h1>Unlimited High Speed Fiber Internet</h1>
+<p>Reliable. Secure. Ultra Fast Broadband in Raipur.</p>
+<a href="#plans" class="btn">Explore Plans</a>
+</div>
 </section>
 
-<section class="plans" id="plans">
-  <h2>Our Plans</h2>
-  <div class="plan-container">
+<section id="features" class="features">
+<h2>Why Choose Us?</h2>
 
-    <div class="plan-card">
-      <h3>Basic</h3>
-      <p>50 Mbps</p>
-      <h4>₹499 / Month</h4>
-    </div>
-
-    <div class="plan-card">
-      <h3>Standard</h3>
-      <p>100 Mbps</p>
-      <h4>₹799 / Month</h4>
-    </div>
-
-    <div class="plan-card">
-      <h3>Premium</h3>
-      <p>200 Mbps</p>
-      <h4>₹1199 / Month</h4>
-    </div>
-
-  </div>
+<div class="feature-box">
+<div class="feature">⚡ Ultra Fast Speed</div>
+<div class="feature">🔒 Secure Network</div>
+<div class="feature">📡 24/7 Support</div>
+<div class="feature">🎮 Low Ping Gaming</div>
+</div>
 </section>
+
+<section id="plans" class="plans">
+<h2>Our Plans</h2>
+
+<div class="plan-cards">
+
+<div class="card">
+<h3>Basic</h3>
+<p class="price">₹499/month</p>
+<p>50 Mbps</p>
+<p>Unlimited Data</p>
+<button>Choose Plan</button>
+</div>
+
+<div class="card popular">
+<h3>Premium</h3>
+<p class="price">₹799/month</p>
+<p>100 Mbps</p>
+<p>Unlimited Data</p>
+<button>Choose Plan</button>
+</div>
+
+<div class="card">
+<h3>Ultra</h3>
+<p class="price">₹999/month</p>
+<p>200 Mbps</p>
+<p>Unlimited Data</p>
+<button>Choose Plan</button>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>📍 Raipur, Chhattisgarh</p>
+<p>📞 9301269783</p>
+<p>📧 jkbroadband07@gmail.com</p>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Your Phone Number" required>
+<select>
+<option>Select Plan</option>
+<option>Basic</option>
+<option>Premium</option>
+<option>Ultra</option>
+</select>
+<button type="submit">Request Connection</button>
+</form>
+
+</section>
+
+<a href="https://wa.me/919301269783" class="whatsapp" target="_blank">💬</a>
 
 <footer>
-  <p>📞 7999631006 | 📧 jkbroadband07@gmail.com</p>
-  <p>© 2026 JKBroadband</p>
+<p>© 2026 JKBroadband | All Rights Reserved</p>
 </footer>
 
-<a href="https://wa.me/917999631006" class="whatsapp" target="_blank">💬</a>
-
 <script>
-/* Loading Screen */
-window.addEventListener("load", function(){
-  document.getElementById("loader").style.display = "none";
+const toggle = document.getElementById("darkToggle");
+toggle.addEventListener("click",()=>{
+document.body.classList.toggle("dark");
 });
-
-/* Typing Animation */
-const text = "High Speed Fiber Internet";
-let i = 0;
-function typing(){
-  if(i < text.length){
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 80);
-  }
-}
-typing();
-
-/* Dark Mode Toggle */
-const toggle = document.getElementById("modeToggle");
-toggle.onclick = function(){
-  document.body.classList.toggle("dark");
-  toggle.innerHTML = document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
 </script>
 
 </body>
